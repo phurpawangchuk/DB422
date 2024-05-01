@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  db:
+    image: mysql
+    restart: always
+    ports:
+      - "3307:3307"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: CS422DB
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db  # Set the hostname of the MySQL server
+      MYSQL_ROOT_PASSWORD: root  # Specify the MySQL root password
+    depends_on:
+      - db
+volumes:
+  db-data:
+  mysql_data:

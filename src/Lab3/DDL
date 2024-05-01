@@ -1,0 +1,74 @@
+CREATE TABLE college (
+	cname varchar(255) NOT NULL,
+	coffee varchar(255),
+	cphone  varchar(10),
+	PRIMARY KEY(cname)
+);
+
+
+CREATE TABLE department (
+	dname varchar(150),
+	dcode varchar(150) NOT NULL,
+	doffice varchar(150),
+	dphone varchar(50),
+	cstartdate date,
+	cname varchar(255),
+    PRIMARY KEY(dcode),
+	FOREIGN KEY(cname) REFERENCES college(cname)
+);
+
+CREATE TABLE student (
+	sid varchar(50) NOT NULL,
+	address varchar(255),
+	fname varchar(150),
+	mname varchar(150),
+	lname varchar(150),
+	phone varchar(10),
+	major varchar(50),
+	dob date,
+	CONSTRAINT PRIMARY KEY(sid)
+);
+
+CREATE TABLE course (
+	coname varchar(255),
+	ccode varchar(50) NOT NULL,
+	cdescription varchar(255),
+	level varchar(50),
+	credits varchar(50),
+	dept_code varchar(150),
+	PRIMARY KEY(ccode),
+	UNIQUE(coname),
+	CONSTRAINT fk_dept_dcode FOREIGN KEY(dept_code) REFERENCES department(dcode)
+);
+
+CREATE TABLE section (
+	secid varchar(50) NOT NULL,
+	secno varchar(50),
+	semester varchar(50),
+	year varchar(4),
+	bldg varchar(50),
+	roomno varchar(50),
+	daytime varchar(100),
+	PRIMARY KEY(secid)
+);
+
+CREATE TABLE instructor (
+	id int NOT NULL,
+   	 iname varchar(50),
+   	 ioffice varchar(50),
+  	 iphone varchar(50),
+   	 irank varchar(50),
+    	dept_code varchar(150),
+    	CONSTRAINT PRIMARY KEY(id),
+    	CONSTRAINT fk_instructor_dept_dcode FOREIGN KEY(dept_code) REFERENCES
+        department(dcode)
+);
+
+CREATE TABLE student_section(
+	sid varchar(150),
+    	secid varchar(150),
+    	grade varchar(10),
+    	PRIMARY KEY (sid,secid),
+    	FOREIGN KEY(sid) REFERENCES student(sid),
+    	FOREIGN KEY(secid) REFERENCES section(secid)
+);
