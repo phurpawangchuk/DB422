@@ -114,4 +114,12 @@ SELECT hotelName,sum(price) as Lost_Income
   UPDATE Room SET price=price+0.5*price;
 
 
-
+select CustomerName,max(p.UnitPrice) from Customers c
+    INNER JOIN Orders o ON o.CustomerID=c.CustomerID
+    INNER JOIN OrderDetails od ON od.OrderID=o.OrderID
+    INNER JOIN Products p ON p.ProductID=od.ProductID
+    GROUP BY CustomerName
+    HAVING max(p.UnitPrice) = (
+        SELECT max(UnitPrice) FROM Products
+        );
+    ORDER BY max(p.UnitPrice) DESC;

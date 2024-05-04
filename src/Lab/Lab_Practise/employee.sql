@@ -1,6 +1,14 @@
 
-INSERT INTO employee values(1,'Alice',10.5,null),
-                            (2,'Bob',15,null);
+INSERT INTO employee values(4,'emp4',11,'Clerk',null);
+INSERT INTO employee values(5,'emp5',14,'Manager',null);
+INSERT INTO employee values(6,'emp6',16,'PR',null);
+INSERT INTO employee values(7,'emp7',17,'HR',null);
+INSERT INTO employee values(8,'emp8',18,'Adm',null);
+INSERT INTO employee values(9,'emp9',13,'Clerk',null);
+INSERT INTO employee values(10,'emp10',18,'Accoutant',null);
+INSERT INTO employee values(11,'emp11',6,'PR',null);
+INSERT INTO employee values(12,'emp12',9,'HR',null);
+INSERT INTO employee values(13,'emp13',15,'Adm',null);
 
 CREATE TRIGGER before_hourly_pay_update
     BEFORE UPDATE on employee

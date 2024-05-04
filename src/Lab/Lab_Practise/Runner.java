@@ -1,4 +1,4 @@
-package Lab.Lab3;
+package Lab.Lab_Practise;
 
 import java.util.Arrays;
 import java.util.List;
