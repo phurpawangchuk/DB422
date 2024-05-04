@@ -80,28 +80,32 @@ SELECT hotelName,roomNo,city,COUNT(roomNo) as 'Room Count'
         FROM Room R
         INNER JOIN Hotel H on H.hotelNo=R.roomNo
         GROUP BY hotelName,roomNo,city
-        HAVING city='London'
+        HAVING city='London';
 
 
 -- 5.24 --
-SELECT avg(B.roomNo) FROM Booking B
+SELECT  hotelName, avg(B.roomNo)
+        FROM Booking B
         INNER JOIN Room R ON R.roomNo=B.roomNo
-        INNER JOIN Hotel H on H.hotelNo = B.hotelNo
-        GROUP BY B.roomNo
+        INNER JOIN Hotel H on H.hotelNo = R.hotelNo
+        WHERE MONTH(dateFrom)=8
+        GROUP BY hotelName;
 
 -- 5.25 --
-    SELECT type, hotelName,City
+SELECT type,hotelName,count(type)
     FROM Room r
     INNER JOIN Hotel h ON h.hotelNo=r.hotelNo
     INNER JOIN Booking b ON b.roomNo=r.roomNo
-    WHERE city='London';
+    WHERE city='London'
+    GROUP BY type, hotelName;
 
 -- 5.26 --
-    SELECT sum(price) as Lost_Income
+SELECT hotelName,sum(price) as Lost_Income
     FROM Hotel h
     INNER JOIN Room r ON r.hotelNo=h.hotelNo
-    INNER JOIN Booking b ON b.roomNo=r.roomNo and b.hotelNo=h.hotelNo
-    WHERE b.dateFrom is null
+    INNER JOIN Booking b ON b.roomNo=r.roomNo
+    WHERE b.dateFrom is not null
+    GROUP BY hotelName;
 
 -- 5.27 --
    --seed data in data4_2.sql
