@@ -6,6 +6,12 @@
     WHERE courseName='Computer Science'
 
 -- 2) Retrieve the average grade of a specific assignment across all students.
+    SELECT studentName,avg(assignment_numeric_grade) as averageGrade
+    FROM student_assignment sa
+    INNER JOIN student s ON s.studentId=sa.studentId
+    WHERE assignmentId=1
+    GROUP BY studentName
+
 -- 3) Retrieve the list of all courses taken by a specific student.
 -- 4) Retrieve the list of all instructors who teach a specific course.
 -- 5) Retrieve the total number of students enrolled in a specific course.

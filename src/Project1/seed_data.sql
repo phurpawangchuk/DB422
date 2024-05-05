@@ -10,10 +10,7 @@ VALUES
     (7, 'Ryan Martinez', 'M', '135 Birch St, City G', 'ryan.martinez@example.com'),
     (8, 'Olivia Taylor', 'F', '246 Walnut St, City H', 'olivia.taylor@example.com'),
     (9, 'David White', 'M', '579 Pineapple St, City I', 'david.white@example.com'),
-    (10, 'Sophia Rodriguez', 'F', '864 Orange St, City J', 'sophia.rodriguez@example.com');
-
-INSERT INTO student (studentId, studentName, gender, address, email)
-VALUES
+    (10, 'Sophia Rodriguez', 'F', '864 Orange St, City J', 'sophia.rodriguez@example.com'),
     (11, 'Phurpa Wangchuk', 'M', '102 Orange St, City J', 'phurpa.rodriguez@example.com'),
     (12, 'Dann Astony', 'M', 'H3 MIU St, City J', 'dann.rodriguez@example.com'),
     (13, 'Marc Kuty', 'M', 'H5 MIU St, City K', 'marck.rodriguez@example.com');
@@ -30,15 +27,22 @@ VALUES
     (7, '2024-05-14', 'Music Composition', '2024-05-07'),
     (8, '2024-05-25', 'Physics Experiment', '2024-05-08'),
     (9, '2024-05-28', 'Geography Presentation', '2024-05-09'),
-    (10, '2024-05-30', 'Language Exercise', '2024-05-10');
+    (10, '2024-05-30', 'Language Exercise', '2024-05-10'),
+   (11, '2024-05-05', 'DB ERD', '2024-05-04'),
+   (12, '2024-05-06', 'DDL Query', '2024-05-05'),
+   (13, '2024-05-07', 'DML Query', '2024-05-06'),
+   (14, '2024-05-07', 'ER Diagram', '2024-05-06'),
+   (15, '2024-05-07', 'ER Diagram', '2024-05-06'),
+   (16, '2024-05-07', 'ER Diagram', '2024-05-06'),
+   (17, '2024-05-07', 'Basic SQL', '2024-05-06'),
+   (18, '2024-05-07', 'Basic SQL', '2024-05-06'),
+   (19, '2024-05-07', 'Advance SQL', '2024-05-06'),
+   (20, '2024-05-07', 'Advance SQL', '2024-05-06');
 
-INSERT INTO assignment (assignmentId, assign_due_date, assign_description, assign_created_date)
-VALUES (11, '2024-05-05', 'DB ERD', '2024-05-04'),
-       (12, '2024-05-06', 'DDL Query', '2024-05-05'),
-       (13, '2024-05-07', 'DML Query', '2024-05-06');
 
 --  10 records into the student_assignment table
-INSERT INTO student_assignment (assignmentId, assignment_numeric_grade, assignment_letter_grade, assignment_submission_date, assignment_graded_date,
+INSERT INTO student_assignment (assignmentId, assignment_numeric_grade, assignment_letter_grade,
+                                assignment_submission_date, assignment_graded_date,
                                 assignment_returned_date, studentId)
 VALUES
     (1, 85, 'B+', '2024-05-03', '2024-05-10', '2024-05-12', 1),
@@ -50,15 +54,17 @@ VALUES
     (7, 92, 'A', '2024-05-16', '2024-05-25', '2024-05-27', 7),
     (8, 85, 'B+', '2024-05-18', '2024-05-27', '2024-05-29', 8),
     (9, 90, 'A-', '2024-05-20', '2024-06-01', '2024-06-03', 9),
-    (10, 94, 'A', '2024-05-22', '2024-06-03', '2024-06-05', 10);
-
-INSERT INTO student_assignment (assignmentId, assignment_numeric_grade, assignment_letter_grade,
-                                assignment_submission_date, assignment_graded_date,
-                                assignment_returned_date, studentId)
-VALUES
+    (10, 94, 'A', '2024-05-22', '2024-06-03', '2024-06-05', 10),
     (11, 0, null, null, null, null, 1),
     (12, 0, null, null, null, null, 2),
-    (13, 0, null, null, null, null, 3);
+    (13, 0, null, null, null, null, 3),
+    (14, 85, 'B+', '2024-05-04', '2024-05-10', '2024-05-12', 1),
+    (15, 92, 'A', '2024-05-05', '2024-05-12', '2024-05-14', 1),
+    (16, 78, 'C+', '2024-05-07', '2024-05-14', '2024-05-16', 3),
+    (17, 95, 'A', '2024-05-10', '2024-05-18', '2024-05-20', 2),
+    (18, 78, 'C+', '2024-05-07', '2024-05-14', '2024-05-16', 3),
+    (19, 95, 'A', '2024-05-10', '2024-05-18', '2024-05-20', 2),
+    (20, 80, 'B', '2024-05-12', '2024-05-20', '2024-05-22', 3);
 
 
 -- 10 records into the course table
