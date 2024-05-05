@@ -1,19 +1,19 @@
 -- 10 records into the student table
 INSERT INTO student (studentId, studentName, gender, address, email)
 VALUES
-    (1, 'John Doe', 'M', '123 Main St, City A', 'john.doe@example.com'),
-    (2, 'Alice Smith', 'F', '456 Elm St, City B', 'alice.smith@example.com'),
-    (3, 'Bob Johnson', 'M', '789 Oak St, City C', 'bob.johnson@example.com'),
-    (4, 'Emma Brown', 'F', '321 Pine St, City D', 'emma.brown@example.com'),
-    (5, 'Michael Davis', 'M', '654 Maple St, City E', 'michael.davis@example.com'),
-    (6, 'Sarah Wilson', 'F', '987 Cedar St, City F', 'sarah.wilson@example.com'),
-    (7, 'Ryan Martinez', 'M', '135 Birch St, City G', 'ryan.martinez@example.com'),
-    (8, 'Olivia Taylor', 'F', '246 Walnut St, City H', 'olivia.taylor@example.com'),
-    (9, 'David White', 'M', '579 Pineapple St, City I', 'david.white@example.com'),
-    (10, 'Sophia Rodriguez', 'F', '864 Orange St, City J', 'sophia.rodriguez@example.com'),
-    (11, 'Phurpa Wangchuk', 'M', '102 Orange St, City J', 'phurpa.rodriguez@example.com'),
-    (12, 'Dann Astony', 'M', 'H3 MIU St, City J', 'dann.rodriguez@example.com'),
-    (13, 'Marc Kuty', 'M', 'H5 MIU St, City K', 'marck.rodriguez@example.com');
+    (1, 'John Doe', 'M', '123 Main St City A', 'john.doe@example.com'),
+    (2, 'Alice Smith', 'F', '456 Elm St City B', 'alice.smith@example.com'),
+    (3, 'Bob Johnson', 'M', '789 Oak St City C', 'bob.johnson@example.com'),
+    (4, 'Emma Brown', 'F', '321 Pine St City D', 'emma.brown@example.com'),
+    (5, 'Michael Davis', 'M', '654 Maple St City E', 'michael.davis@example.com'),
+    (6, 'Sarah Wilson', 'F', '987 Cedar St City F', 'sarah.wilson@example.com'),
+    (7, 'Ryan Martinez', 'M', '135 Birch St City G', 'ryan.martinez@example.com'),
+    (8, 'Olivia Taylor', 'F', '246 Walnut St City H', 'olivia.taylor@example.com'),
+    (9, 'David White', 'M', '579 Pineapple St City I', 'david.white@example.com'),
+    (10, 'Sophia Rodriguez', 'F', '864 Orange St City J', 'sophia.rodriguez@example.com'),
+    (11, 'Phurpa Wangchuk', 'M', '102 Orange St City J', 'phurpa.rodriguez@example.com'),
+    (12, 'Dann Astony', 'M', 'H3 MIU St City J', 'dann.rodriguez@example.com'),
+    (13, 'Marc Kuty', 'M', 'H5 MIU St City K', 'marck.rodriguez@example.com');
 
 -- 10 records into the assignment table
 INSERT INTO assignment (assignmentId, assign_due_date, assign_description, assign_created_date)
@@ -81,7 +81,7 @@ VALUES
     (9, 'GEO906', 'Geography'),
     (10, 'LANG1007', 'Language Arts');
 
--- 10 records into the student_course table
+-- 20 records into the student_course table
 INSERT INTO student_course (id, studentId, courseId, stdcourse_numeric_grade, stdcourse_letter_grade)
 VALUES
     (1, 1, 1, 90, 'A'),
@@ -93,14 +93,17 @@ VALUES
     (7, 7, 7, 90, 'A'),
     (8, 8, 8, 94, 'A'),
     (9, 9, 9, 87, 'B+'),
-    (10, 10, 10, 93, 'A');
-
-INSERT INTO student_course (id, studentId, courseId, stdcourse_numeric_grade, stdcourse_letter_grade)
-VALUES
-    (11, 11, null, null, null),
-    (12, 12, null, null, null),
-    (13, 13, null, null, null);
-
+    (10, 10, 10, 93, 'A'),
+    (11, 11, 1, null, null),
+    (12, 12, 2, null, null),
+    (13, 13, 3, null, null),
+    (14, 1, 8, 90, 'A'),
+    (15, 1, 7, 85, 'B+'),
+    (16, 2, 3, 92, 'A'),
+    (17, 2, 4, 88, 'B+'),
+    (18, 5, 7, 95, 'A'),
+    (19, 5, 6, 88, 'B+'),
+    (20, 6, 8, 95, 'A');
 
 -- 10 records into the instructor table
 INSERT INTO instructor (instructorId, instructorName)

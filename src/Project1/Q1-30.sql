@@ -13,7 +13,14 @@
     GROUP BY studentName
 
 -- 3) Retrieve the list of all courses taken by a specific student.
+    SELECT courseName,studentName
+    FROM student_course sc
+    INNER JOIN student s ON s.studentId = sc.studentId
+    INNER JOIN course c ON c.courseId = sc.courseId
+    WHERE s.studentId=1
+
 -- 4) Retrieve the list of all instructors who teach a specific course.
+
 -- 5) Retrieve the total number of students enrolled in a specific course.
 -- 6) Retrieve the list of all assignments for a specific course.
 -- 7) Retrieve the highest grade received by a specific student in a specific course.
