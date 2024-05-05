@@ -1,6 +1,6 @@
 CREATE TABLE student(
     studentId int not null,
-    fullName varchar(255),
+    studentName varchar(255),
     gender varchar(1),
     address varchar(255),
     email varchar(255),

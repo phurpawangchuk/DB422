@@ -1,5 +1,5 @@
 1. student:
-    Stores information about students, such as their ID, full name, gender, address, and email.
+    Stores information about students, such as their studentId, studentName, gender, address, and email.
     Primary Key: studentId
 
 2. student_assignment:

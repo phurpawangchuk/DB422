@@ -1,5 +1,5 @@
 -- 10 records into the student table
-INSERT INTO student (studentId, fullName, gender, address, email)
+INSERT INTO student (studentId, studentName, gender, address, email)
 VALUES
     (1, 'John Doe', 'M', '123 Main St, City A', 'john.doe@example.com'),
     (2, 'Alice Smith', 'F', '456 Elm St, City B', 'alice.smith@example.com'),
@@ -12,7 +12,7 @@ VALUES
     (9, 'David White', 'M', '579 Pineapple St, City I', 'david.white@example.com'),
     (10, 'Sophia Rodriguez', 'F', '864 Orange St, City J', 'sophia.rodriguez@example.com');
 
-INSERT INTO student (studentId, fullName, gender, address, email)
+INSERT INTO student (studentId, studentName, gender, address, email)
 VALUES
     (11, 'Phurpa Wangchuk', 'M', '102 Orange St, City J', 'phurpa.rodriguez@example.com'),
     (12, 'Dann Astony', 'M', 'H3 MIU St, City J', 'dann.rodriguez@example.com'),
